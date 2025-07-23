@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&display=swap');/* CSS Document */
+/* 共通書式 -S */
+body {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 110%;
+  line-height: 1.5em;
+  color: #404040;
+}
+section {
+  padding-top: 20px;
+}
+h1 {
+  margin: 30px 1em;
+  text-align: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 200%;
+  color: #20B2AA;
+  text-shadow: 1px 1px 2px #808080;
+}
+h1 span {
+  font-size: 75%;
+}
+h2 {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 160%;
+  margin: 10px 1em;
+}
+p {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+/* 共通書式 -E */
+
+/* ヘッダー -S */
+header {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: rgba(209, 233, 255, .7);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 1.2em;
+}
+header #headerLogo {
+  display: flex;
+  padding-left: 30px;
+  justify-content: start;
+  font-size: 120%;
+}
+header #HBMenu {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  padding-right: 50px;
+}
+header nav ul li {
+  padding: 5px 10px;
+  text-align: center;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #808080;
+  text-shadow: 0 0 5px #fff, 0 0 10px #aaa, 1px 1px 2px #666;
+  padding: 0 .5em;
+}
+header small {
+  font-size: 75%;
+}
+header nav ul li a:hover {
+  text-decoration-line: underline;
+}
+/* ヘッダー -E */
+
+/* メイン -S */
+main {
+  margin-top: 80px;
+}
+
+/* フッター -S */
+footer {
+  margin-top: 50px;
+  background: #FFF;
+  width: 100vw;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer ul li {
+  margin-right: 1em;
+}
+#copylight {
+  margin: 10px;
+}
+#copylight p {
+  margin: auto;
+  line-height: 1em;
+  text-align: center;
+}
+/* フッター -E */
+
+/* クラス -S */
+/* flexbox */
+.flexbox {
+  display: flex;
+}
+
+/* 中央寄せ */
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+/* トップページ最新情報エリア */
+.newInfoBox {
+  display: block;
+  background-color: #FFF;
+  width: 85vw;
+  max-width: 1600px;
+  box-shadow: 3px 3px 2px #AAA;
+  border-radius: 15px;
+  margin: 12px auto;
+}
+.infoTitle {
+  background-color: rgba(209, 233, 255, 1);
+  border-radius: 15px 15px 0 0;
+  padding: 8px;
+}
+.infoTitle p {
+  padding: 0 3px;
+  font-style: italic;
+  color: #666;
+  vertical-align: middle;
+}
+ .infoTitle h2 {
+  text-align: left;
+  margin-left: .5em;
+}
+.infoTitle h2 a {
+  font-family: 'Kiwi Maru', serif;
+  font-weight: bold;
+  background: linear-gradient(to right, #8A70B1, #5A9BD5); /* 少し暗めの紫→青 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.25),  /* 黒寄りの影で読みやすく */
+    0 0 3px rgba(255, 255, 255, 0.4); /* 幻想感は残す */
+  display: inline-block;
+}
+.infoSentence {
+  padding: 8px 1em;
+}
+
+/* 記事種類タグアイコン */
+.typeTag {
+  height: 1.2em;
+  width: auto;
+  margin-left: 1em;
+  vertical-align: middle;
+}
+
+/* クラス -E */
+
+/* ID -S */
+#topPage {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url(../img/bkg/002.jpg);
+  background-size: cover;
+}
+/* ID -E */
+
+/* レスポンシブ対応：画面幅600px以下の場合（スマホ想定） */
+@media screen and (max-width: 600px) {
+  /* 共通書式 */
+  body {
+    font-size: 100%;
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 130%;
+    margin: 15px 1em;
+  }
+  h2 {
+    font-size: 120%;
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex;
+    padding: .5em;
+    justify-content: center;
+  }
+  header #headerLogo {
+    margin: auto;
+  }
+  header #HBMenu {
+    display: block;
+    margin-left: auto;
+  }
+  header nav {
+    display: none;
+  }
+
+  /* メイン */
+  main {
+    margin-top: 40px;
+  }
+}
