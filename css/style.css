@@ -39,7 +39,7 @@ h2 {
   font-weight: 400;
   font-style: normal;
   text-align: center;
-  font-size: 160%;
+  font-size: 40px;
   margin: 10px 1em;
 }
 /* p {
@@ -185,7 +185,7 @@ main {
 footer {
   margin-top: 50px;
   background: #FFF;
-  width: 100vw;
+  width: 100%;
 }
 footer ul {
   display: flex;
@@ -216,9 +216,48 @@ footer ul li {
   display: flex;
   justify-content: center;
 }
+/* 一覧表示お知らせエリア */
+.infoListArea {
+  display: block;
+  background: white;
+  margin: 0 50px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px #404040 double;
+}
+.infoListArea a {
+  text-decoration: none;
+}
+.infoList {
+  display: flex;
+  border-bottom: 1px #404040 dashed;
+  align-items: center;
+  margin-top: 5px;
+}
+.infoList p {
+  margin: 0 .5em;
+  color: black;
+  line-height: 1.8em;
+}
+.infoList .ILDate {
+  width: 6em;
+}
+.infoList .ILCat{
+  font-size: 90%;
+  color: white;
+  background-color: var(--box-color);
+  border-radius: 3px;
+  width: 5em;
+  text-align: center;
+}
+.ILFlex {
+  display: flex;
+}
 
-/* トップページ最新情報エリア */
-.newInfoBox {
+/* クラス -E */
+
+/* トップページ */
+/* .newInfoBox {
   display: block;
   background-color: #FFF;
   width: 85vw;
@@ -242,27 +281,20 @@ footer ul li {
  .infoTitle h2 {
   text-align: left;
   margin-left: .5em;
+}/*/*
+#topics {
+  display: block;
+  width: 100vw;
+  background: #defffd;
+  padding-bottom: 20px;
 }
-.infoTitle h2 a {
-  font-family: 'Kiwi Maru', serif;
-  font-weight: bold;
-  background: linear-gradient(to right, #8A70B1, #5A9BD5); /* 少し暗めの紫→青 */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    1px 1px 2px rgba(0, 0, 0, 0.25),  /* 黒寄りの影で読みやすく */
-    0 0 3px rgba(255, 255, 255, 0.4); /* 幻想感は残す */
-  display: inline-block;
-}
-.infoSentence {
-  padding: 8px 1em;
-  text-align: left;
-}
+
+/* SNSアイコン書式 */
 .snsIco {
   width: 50px;
   margin: 0 5px;
 }
-/* クラス -E */
+
 
 /* ID -S */
 
@@ -280,7 +312,7 @@ footer ul li {
     margin: 15px 1em;
   }
   h2 {
-    font-size: 120%;
+    font-size: 150%;
   }
 
   /* ヘッダー */
@@ -300,6 +332,11 @@ footer ul li {
   }
   header #headerRight {
     display: none;
+  }
+
+  /* トップページ */
+  .infoList {
+    display: block;
   }
 
   /* メイン */
