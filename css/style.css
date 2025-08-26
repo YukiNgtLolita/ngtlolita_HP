@@ -338,6 +338,9 @@ footer ul li {
   .infoList {
     display: block;
   }
+  .infoListArea {
+    margin: 0 20px;
+  }
 
   /* メイン */
   main {
