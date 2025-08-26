@@ -8,19 +8,29 @@
   </head>
   <body id="topPage">
     <header>
-      <!-- TODO ロゴ画像完成次第置換 -->
-      <p id="headerLogo"><a href="index.html">Salon de l'ibis</a></p>
-      <nav>
-        <ul>
-          <li><a href="#about">ABOUT US<br /><small>「Salon de l'ibis」について</small></a></li>
-          <li><a href="news.html">NEWS<br /><small>最新情報</small></a></li>
-          <li><a href="event.html">EVENT<br /><small>イベント情報</small></a></li>
-          <li><a href="column.html">BLOG&COLUMN<br /><small>ブログ＆コラム</small></a></li>
-          <li><a href="discord.html">DISCORD<br /><small>Discordのご案内</small></a></li>
-          <li><a href="contact.html">CONTACT<br /><small>お問い合わせ</small></a></li>
-        </ul>
-      </nav>
-      <img src="../img/btn/hbmenu.png" alt="メニュー" id="HBMenu">
+      <a href="index.html" id="headerTitle">
+        <img src="../img/logo.png" alt="ロゴ" id="headerLogo">
+        <div>
+          <p id="headerSubTitle">新潟Kawaiiお茶会プロジェクト</p>        
+          <p id="headerSDL" data-text="Salon de l'ibis">Salon de l'ibis</p>
+        </div>
+      </a>
+      <div id="headerRight">
+        <nav>
+          <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="event.html">EVENT</a></li>
+            <li><a href="column.html">BLOG</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div id="sns">
+          <a href="https://x.com/ngtlolita"><img src="../img/ico/twitter.png" alt="Twitter" class="snsIco"></a>
+          <a href="https://discord.gg/wkWAwMTxyF"><img src="../img/ico/discord.png" alt="Discord" class="snsIco"></a>
+        </div>
+      </div>
+      <img src="../img/ico/hb.jpg" alt="メニュー" id="HBMenu">
     </header>
     <main>
       <section class="fadeImgBox">
@@ -34,14 +44,6 @@
         <!-- 更新する場合、一番下のnewInfoBox（古いもの）を削除し、一番上に新しいものを追加 -->
         <div class="newInfoBox">
           <div class="infoTitle">
-            <p>2025/09/01<img src="../img/lbl/event.png" class="typeTag"></p>
-            <h2><a href="event/20251123.html">第1回お茶会開催決定！</a></h2>
-          </div>
-          <p class="infoSentence">「Salon de l'ibis」初のお茶会を新潟市内で開催します！
-            <br />豪華ゲストあり！お申し込みは<a href="event/20251123.html">コチラ</a>から</p>
-        </div>
-        <div class="newInfoBox">
-          <div class="infoTitle">
             <p>2025/09/01</p>
             <h2><a href="event/20251123.html">第1回お茶会開催決定！</a></h2>
           </div>
@@ -51,17 +53,10 @@
         <div class="newInfoBox">
           <div class="infoTitle">
             <p>2025/09/01</p>
-            <h2><a href="event/20251123.html">第1回お茶会開催決定！</a></h2>
+            <h2><a href="column/20250901.html">「Salon de l'ibis設立の想い」を公開しました</a></h2>
           </div>
-          <p class="infoSentence">「Salon de l'ibis」初のお茶会を新潟市内で開催します！
-            <br />豪華ゲストあり！お申し込みは<a href="event/20251123.html">コチラ</a>から</p>
+          <p class="infoSentence">本コミュニティを立ち上げたきっかけなど。ぜひお読みください！</p>
         </div>
-      </section>
-      <section id="about">
-        <h1>「Salon de l'ibis」について<span>-About us-</span></h1>
-        <h2>「とびっきりのおしゃれして、もっと新潟を元気にしませんか？」</h2>
-        <h2>そんな想いで、Salon de l'ibisは生まれました。</h2>
-        
       </section>
       <section id="contact">
         <h1>お問い合わせ<span>-Contact-</span></h1>
@@ -73,9 +68,9 @@
         <li><a href="sitemap.html">サイトマップ・利用規約</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
-      <div id="copylight">
-        <p><small>Icons by <a href="https://icons8.com">Icons8</a>.</small></p>
-        <p><small>&copy;2025 Salon de l'ibis All Rights Reserved.</small></p>
+      <div id="copyright">
+        <p><small>&copy;2025 Salon de l'ibis</small></p>
+        <p><small>Illustration by Nancy and other <a href="credit.html">free resources</a>.</small></p>
         <p><small>当サイトのコンテンツの無断転載・使用を固く禁じます。</small></p>
       </div>
     </footer>

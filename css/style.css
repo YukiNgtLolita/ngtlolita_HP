@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&display=swap');/* CSS Document */
-/* 共通書式 -S */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&display=swap');/* 共通書式 -S */
 body {
   display: grid;
   place-items: center;
@@ -16,14 +15,21 @@ section {
   padding-top: 20px;
 }
 h1 {
+  display: block;
   margin: 30px 1em;
+  padding: 10px;
   text-align: center;
-  font-family: "Sawarabi Mincho", serif;
-  font-weight: 400;
+  font-family: "Kaisei HarunoUmi", serif;
+  font-weight: 500;
   font-style: normal;
   font-size: 200%;
-  color: #20B2AA;
-  text-shadow: 1px 1px 2px #808080;
+  color: #eb9861;
+  text-shadow:
+  -1px -1px 0 #ddd,
+   1px -1px 0 #ddd,
+  -1px  1px 0 #ddd,
+   1px  1px 0 #ddd;
+  background: rgba(255, 255, 255, .5);
 }
 h1 span {
   font-size: 75%;
@@ -36,38 +42,106 @@ h2 {
   font-size: 160%;
   margin: 10px 1em;
 }
-p {
+/* p {
   margin-left: 1em;
   margin-right: 1em;
-}
+  text-align: center;
+} */
 /* 共通書式 -E */
 
 /* ヘッダー -S */
 header {
-  display: block;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: auto;
-  background: rgba(209, 233, 255, .7);
-  box-sizing: border-box;
+  height: 70px;
+  background: linear-gradient(to top, #b45b7d, #f0d7e5);
   position: fixed;
   top: 0;
   left: 0;
   line-height: 1.2em;
+  align-items: center;
+  z-index: 20;
+}
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 20px;
+  background-image: url("../img/bkg/lace.png");
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: auto 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+header #headerTitle {
+  display: flex;
+  height: 70px;
+  text-decoration: none;
+  color: #502700;
+  align-items: center;
+  margin-left: 20px;
+}
+header #headerTitle div {
+  display: block;
+  width: 250px;
+  height: 65px;
 }
 header #headerLogo {
-  display: flex;
-  padding-left: 30px;
-  justify-content: start;
-  font-size: 120%;
+  height: 60px;
+}
+header #headerSubTitle {
+  font-size: 14px;
+  text-align: center;
+  line-height: 14px;
+  padding-top: 8px;
+}
+#headerSDL {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+  background: linear-gradient(to top, #f899b1, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  position: relative;
+}
+#headerSDL::before {
+  content: attr(data-text);
+  position: absolute;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  background: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  text-shadow:
+    -1px -1px 0 #ee538e,
+     1px -1px 0 #c52d68,
+    -1px  1px 0 #c52d68,
+     1px  1px 0 #c52d68,
+     0px   0px 5px rgba(0, 0, 0, 0.3); /* やわらかい影 */
+  z-index: -1;
 }
 header #HBMenu {
   display: none;
 }
+header nav {
+  align-items: center;
+  position: relative;
+}
 header nav ul {
   display: flex;
-  justify-content: end;
   flex-wrap: wrap;
-  padding-right: 50px;
+  text-align: center;
+  align-items: center;
 }
 header nav ul li {
   padding: 5px 10px;
@@ -80,21 +154,31 @@ header nav ul li a {
   display: block;
   text-decoration: none;
   text-align: center;
-  color: #808080;
-  text-shadow: 0 0 5px #fff, 0 0 10px #aaa, 1px 1px 2px #666;
-  padding: 0 .5em;
+  color: white;
+  font-weight: 600;
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.4),
+   -1px -1px 2px rgba(0, 0, 0, 0.4);
+  padding: 0 .2em;
+  font-size: 18px;
 }
-header small {
-  font-size: 75%;
-}
-header nav ul li a:hover {
+header a:hover {
   text-decoration-line: underline;
+}
+header #headerRight {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+header #sns {
+  display: flex;
+  flex-wrap: nowrap;
 }
 /* ヘッダー -E */
 
 /* メイン -S */
 main {
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 /* フッター -S */
@@ -110,19 +194,20 @@ footer ul {
 footer ul li {
   margin-right: 1em;
 }
-#copylight {
+#copyright {
   margin: 10px;
 }
-#copylight p {
+#copyright p {
   margin: auto;
   line-height: 1em;
   text-align: center;
+  font-family: sans-serif;
 }
 /* フッター -E */
 
 /* クラス -S */
-/* flexbox */
-.flexbox {
+/* flexBox */
+.flexBox {
   display: flex;
 }
 
@@ -138,12 +223,12 @@ footer ul li {
   background-color: #FFF;
   width: 85vw;
   max-width: 1600px;
-  box-shadow: 3px 3px 2px #AAA;
+  box-shadow: 8px 8px 20px rgba(0,0,0,.3);
   border-radius: 15px;
   margin: 12px auto;
 }
 .infoTitle {
-  background-color: rgba(209, 233, 255, 1);
+  background: linear-gradient(to top, #fff1f8, #e7dfff);
   border-radius: 15px 15px 0 0;
   padding: 8px;
 }
@@ -152,6 +237,7 @@ footer ul li {
   font-style: italic;
   color: #666;
   vertical-align: middle;
+  text-align: left;
 }
  .infoTitle h2 {
   text-align: left;
@@ -170,27 +256,20 @@ footer ul li {
 }
 .infoSentence {
   padding: 8px 1em;
+  text-align: left;
 }
-
-/* 記事種類タグアイコン */
-.typeTag {
-  height: 1.2em;
-  width: auto;
-  margin-left: 1em;
-  vertical-align: middle;
+.snsIco {
+  width: 50px;
+  margin: 0 5px;
 }
-
 /* クラス -E */
 
 /* ID -S */
-#topPage {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url(../img/bkg/002.jpg);
-  background-size: cover;
-}
+
 /* ID -E */
 
-/* レスポンシブ対応：画面幅600px以下の場合（スマホ想定） */
-@media screen and (max-width: 600px) {
+/* レスポンシブ対応：画面幅900px以下の場合（スマホ想定） */
+@media screen and (max-width: 900px) {
   /* 共通書式 */
   body {
     font-size: 100%;
@@ -207,17 +286,19 @@ footer ul li {
   /* ヘッダー */
   header {
     display: flex;
-    padding: .5em;
+    padding: 0 .5em;
     justify-content: center;
   }
   header #headerLogo {
     margin: auto;
+    font-size: 100%;
   }
   header #HBMenu {
     display: block;
     margin-left: auto;
+    height: 70px;
   }
-  header nav {
+  header #headerRight {
     display: none;
   }
 
