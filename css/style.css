@@ -200,6 +200,8 @@ footer a {
   color: #dfdfdf;
 }
 footer p {
+  display: block;
+  width: 100vw;
   margin: .5em 1em;
   text-align: center;
   color: #dfdfdf;
@@ -367,5 +369,10 @@ footer p {
   /* メイン */
   main {
     margin-top: 40px;
+  }
+
+  /* フッター */
+  footer p {
+    font-size: 75%;
   }
 }
