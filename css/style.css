@@ -185,13 +185,13 @@ main {
 footer {
   margin-top: 50px;
   background: #201208;
-  width: 100%;
-  padding: 10px;
+  width: 100vw;
   font-family: sans-serif;
 }
 footer ul {
   display: flex;
   justify-content: center;
+  margin-top: .5em;
 }
 footer ul li {
   margin-right: 1em;
@@ -200,10 +200,11 @@ footer a {
   color: #dfdfdf;
 }
 footer p {
-  margin-top: .5em;
+  margin: .5em 1em;
   text-align: center;
   color: #dfdfdf;
   line-height: 1.2em;
+  font-size: 80%;
 }
 /* #copyright {
   margin: 10px;
