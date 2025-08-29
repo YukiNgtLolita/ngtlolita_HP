@@ -12,6 +12,7 @@ body {
   color: #404040;
   background: linear-gradient(135deg, #ffe0ea, #f7d0e2, #f3dce8);
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 h1 {
   display: block;
@@ -363,7 +364,6 @@ footer p {
   width: 100%;
 }
 .eyeCatchSentence {
-  padding: 0 20px;
   width: 50%;
 }
 .eyeCatch h2 {
@@ -398,7 +398,7 @@ footer p {
   /* 共通書式 */
   body {
     font-size: 100%;
-    padding: 0 10px;
+
   }
   h1 {
     font-size: 130%;
@@ -435,7 +435,7 @@ footer p {
     margin: 0 20px;
   }
   #sarorin div {
-    width: 80vw;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
