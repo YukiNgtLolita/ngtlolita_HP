@@ -3,16 +3,15 @@
 body {
   display: grid;
   place-items: center;
-  width: 100vw;
+  width: 100%;
   font-family: "Kiwi Maru", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 110%;
   line-height: 1.5em;
   color: #404040;
-}
-section {
-  padding-top: 20px;
+  background: linear-gradient(135deg, #ffe0ea, #f7d0e2, #f3dce8);
+  background-attachment: fixed;
 }
 h1 {
   display: block;
@@ -36,11 +35,14 @@ h1 span {
 }
 h2 {
   font-family: "Sawarabi Mincho", serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   text-align: center;
   font-size: 40px;
   margin: 10px 1em;
+}
+section {
+  padding: 10px 0;
 }
 /* p {
   margin-left: 1em;
@@ -54,9 +56,9 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   height: 70px;
-  background: linear-gradient(to top, #b45b7d, #f0d7e5);
+  background: linear-gradient(to top, #f379a8, #f0d7e5);
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +71,7 @@ header::after {
   position: absolute;
   left: 0;
   bottom: -20px;
-  width: 100vw;
+  width: 100%;
   height: 20px;
   background-image: url("../img/bkg/lace.png");
   background-repeat: repeat-x;
@@ -178,14 +180,13 @@ header #sns {
 
 /* メイン -S */
 main {
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 /* フッター -S */
 footer {
-  margin-top: 50px;
   background: #201208;
-  width: 100vw;
+  width: 100%;
   font-family: sans-serif;
 }
 footer ul {
@@ -194,14 +195,13 @@ footer ul {
   margin-top: .5em;
 }
 footer ul li {
-  margin-right: 1em;
+  margin: .5em;
 }
 footer a {
   color: #dfdfdf;
 }
 footer p {
   display: block;
-  width: 100%;
   margin: .5em 1em;
   text-align: center;
   color: #dfdfdf;
@@ -298,13 +298,13 @@ footer p {
 }/*/*
 #topics {
   display: block;
-  width: 100vw;
+  width: 100%;
   background: #defffd;
   padding-bottom: 20px;
 }
 #contact {
   display: block;
-  width: 100vw;
+  width: 100%;
   background: #ffedf4;
   padding-bottom: 20px;
 }
@@ -319,8 +319,77 @@ footer p {
   margin: 0 5px;
 }
 
-
-/* ID -S */
+.eyeCatch {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.eyeCatchImg {
+  position: relative;
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.eyeCatchImg::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 15px 15px rgb(242, 234, 255);
+}
+.eyeCatchImgRight {
+  position: relative;
+  display: flex;
+  order: 1;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.eyeCatchImgRight::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 15px 15px rgb(242, 234, 255);
+}
+.eyeCatchImg img {
+  width: 100%;
+}
+.eyeCatchSentence {
+  padding: 0 20px;
+  width: 50%;
+}
+.eyeCatch h2 {
+  font-size: clamp(24px, 3.2vw, 45px);
+}
+.eyeCatch p {
+  width: 80%;
+  margin: 1em auto;
+  font-size: clamp(18px, 1.7vw, 30px);
+  line-height: 1.4em;
+}
+#sarorin div {
+  display: block;
+  width: 40vw;
+  margin: 20px 0 0 auto;
+}
+#sarorin img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+}
+#sarorin p {
+  text-align: center;
+  font-size: 90%;
+}
 
 /* ID -E */
 
@@ -365,10 +434,21 @@ footer p {
   .infoListArea {
     margin: 0 20px;
   }
+  #sarorin div {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   /* メイン */
   main {
     margin-top: 40px;
+  }
+  .eyeCatch {
+    display: block;
+  }
+  .eyeCatch div {
+    width: 100%;
   }
 
   /* フッター */
