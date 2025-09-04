@@ -104,7 +104,7 @@ header #headerSubTitle {
   padding-top: 8px;
 }
 #headerSDL {
-  font-size: 32px;
+  font-size: clamp(20px, 6vw, 32px);
   font-weight: 600;
   line-height: 35px;
   text-align: center;
@@ -133,27 +133,43 @@ header #headerSubTitle {
      0px   0px 5px rgba(0, 0, 0, 0.3); /* やわらかい影 */
   z-index: -1;
 }
-header #HBMenu {
+.menu-icon {
   display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
 }
-header nav {
+.menu-icon img {
+  margin-left: auto;
+  margin-right: 10px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  transition: transform 0,2s ease;
+}
+/* header nav {
   align-items: center;
   position: relative;
+} */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
 }
-header nav ul {
+.menu ul {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
 }
-header nav ul li {
+.menu li {
   padding: 5px 10px;
   text-align: center;
   font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
 }
-header nav ul li a {
+.menu li a {
   display: block;
   text-decoration: none;
   text-align: center;
@@ -177,11 +193,15 @@ header #sns {
   display: flex;
   flex-wrap: nowrap;
 }
+#menu-toggle {
+  display: none;
+}
 /* ヘッダー -E */
 
 /* メイン -S */
 main {
   margin-top: 70px;
+  max-width: 1400px;
 }
 
 /* フッター -S */
@@ -238,7 +258,7 @@ footer p {
   margin: 0 50px;
   padding: 30px;
   border-radius: 10px;
-  border: 2px #404040 double;
+  border: 3px #404040 double;
 }
 .infoListArea a {
   text-decoration: none;
@@ -246,7 +266,7 @@ footer p {
 .infoList {
   display: flex;
   border-bottom: 1px #404040 dashed;
-  align-items: center;
+  align-items: start;
   margin-top: 5px;
 }
 .infoList p {
@@ -259,14 +279,17 @@ footer p {
 }
 .infoList .ILCat{
   font-size: 90%;
+  line-height: 1.2em;
   color: white;
   background-color: var(--box-color);
   border-radius: 3px;
   width: 5em;
+  height: fit-content;
   text-align: center;
 }
 .ILFlex {
   display: flex;
+  align-items: center;
 }
 
 /* クラス -E */
@@ -302,6 +325,7 @@ footer p {
   width: 100%;
   background: #defffd;
   padding-bottom: 20px;
+  border-top: 2px dashed #8080ffb0;
 }
 #contact {
   display: block;
@@ -312,6 +336,8 @@ footer p {
 #contact p {
   text-align: center;
   font-size: 115%;
+  width: 85%;
+  margin: auto;
 }
 
 /* SNSアイコン書式 */
@@ -368,6 +394,12 @@ footer p {
 }
 .eyeCatch h2 {
   font-size: clamp(24px, 3.2vw, 45px);
+  font-weight: 600;
+  color: #b35c85;
+  text-shadow:
+    0 0 5px #fff,
+    1px 1px 0px #ffbde6,
+    2px 2px 5px rgba(0,0,0,0.1);
 }
 .eyeCatch p {
   width: 80%;
@@ -418,14 +450,34 @@ footer p {
     margin: auto;
     font-size: 100%;
   }
-  header #HBMenu {
-    display: block;
-    margin-left: auto;
-    height: 70px;
-  }
-  header #headerRight {
+  .menu {
     display: none;
+    flex-direction: column;
+    background-color: #ffa0d6ea;
+    position: absolute;
+    z-index: 100;
+    top: 70px;
+    right: 1em;
+    width: 80%;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    animation: fadeIn 0.3s ease-in-out;
   }
+  .menu ul {
+    display: block;
+  }
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+  .menu-icon {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
 
   /* トップページ */
   .infoList {
@@ -440,6 +492,7 @@ footer p {
     margin-right: auto;
   }
 
+
   /* メイン */
   main {
     margin-top: 40px;
@@ -449,6 +502,9 @@ footer p {
   }
   .eyeCatch div {
     width: 100%;
+  }
+  .eyeCatch h2 {
+    margin: 25px auto 0 auto;
   }
 
   /* フッター */
