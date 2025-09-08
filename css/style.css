@@ -40,10 +40,38 @@ h2 {
   font-style: normal;
   text-align: center;
   font-size: 40px;
-  margin: 10px 1em;
+  margin: 1rem 1em;
+}
+h3 {
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 32px;
+  margin: 1em 0 .5em 0;
 }
 p {
   font-size: 110%;
+}
+.table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* iOSでの慣性スクロール */
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #cdb5cd;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 400px; /* 横幅が狭すぎるとレイアウトが崩れるのを防ぐ */
+  width: 70%;
+  margin: auto;
+}
+
+th, td {
+  border: 1px solid #e6d5e6;
+  padding: 8px;
+  text-align: left;
 }
 /* 共通書式 -E */
 
@@ -195,7 +223,7 @@ header #sns {
 
 /* メイン -S */
 main {
-  margin-top: 70px;
+  margin-top: 90px;
   max-width: 1400px;
 }
 
@@ -204,6 +232,7 @@ footer {
   background: #201208;
   width: 100%;
   font-family: sans-serif;
+  margin-top: 30px;
 }
 footer ul {
   display: flex;
@@ -353,6 +382,15 @@ footer p {
   margin: auto;
 }
 
+/* about.html */
+#about01 {
+  margin-top: 40px;
+}
+#about01 p {
+  margin: 0 auto 1em auto;
+  width: 85%;
+}
+
 /* SNSアイコン書式 */
 .snsIco {
   display: flex;
@@ -459,7 +497,10 @@ footer p {
     margin: 15px 1em;
   }
   h2 {
-    font-size: 180%;
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 24px;
   }
 
   /* ヘッダー */
