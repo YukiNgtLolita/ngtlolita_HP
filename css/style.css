@@ -36,22 +36,21 @@ h1 span {
 }
 h2 {
   font-family: "Sawarabi Mincho", serif;
-  font-weight: 500;
-  font-style: normal;
-  text-align: center;
-  font-size: 40px;
-  margin: 1rem 1em;
-}
-h3 {
-  font-family: "Sawarabi Mincho", serif;
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  font-size: 40px;
+  margin: 1.5em 0 .5em 0;
+}
+h3 {
+  text-align: center;
   font-size: 32px;
-  margin: 1em 0 .5em 0;
+  margin: 2em 0 1em 0;
 }
 p {
   font-size: 110%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .table-container {
   overflow-x: auto;
@@ -62,9 +61,8 @@ table {
   border-collapse: collapse;
   border: 1px solid #cdb5cd;
   border-radius: 8px;
-  width: 100%;
-  min-width: 400px; /* 横幅が狭すぎるとレイアウトが崩れるのを防ぐ */
-  width: 70%;
+  width: 95%;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -72,6 +70,36 @@ th, td {
   border: 1px solid #e6d5e6;
   padding: 8px;
   text-align: left;
+}
+
+ol {
+  max-width: 900px;
+  margin: 1em auto;
+}
+ol li {
+  list-style-type: lower-roman;
+  margin-left: 1em;
+}
+
+.button01 a {
+  display: block;
+  font-family: "Sawarabi Mincho", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #bd5b74;
+  width: fit-content;
+  padding: 10px 2em;
+  border: 2px solid #bd5b84;
+  border-radius: 35px;
+  box-shadow: #bd5b84 2px 2px 10px;
+  background: #fcfcfc;
+  text-align: center;
+  margin: 30px auto 0 auto;
+}
+.button01 a:hover {
+  color: #fcfcfc;
+  background: #bd5b84;
 }
 /* 共通書式 -E */
 
@@ -224,6 +252,7 @@ header #sns {
 /* メイン -S */
 main {
   margin-top: 90px;
+  width: 95vw;
   max-width: 1400px;
 }
 
@@ -247,7 +276,7 @@ footer a {
 }
 footer p {
   display: block;
-  margin: .5em 1em;
+  margin: .5em auto;
   text-align: center;
   color: #dfdfdf;
   line-height: 1.2em;
@@ -327,10 +356,6 @@ footer p {
   height: 1.3em;
   text-align: center;
 }
-.ILFlex {
-  display: flex;
-  align-items: center;
-}
 
 /* クラス -E */
 
@@ -364,14 +389,15 @@ footer p {
   display: block;
   width: 100%;
   background: linear-gradient(to bottom, #ffeaf4, #fcddee);
-  padding: 30px 0 30px 0;
+  padding: 1px 0 30px 0;
   border-bottom: #f899b1 2px dotted;
 }
 #contact {
   display: block;
   width: 100%;
   background: linear-gradient(to bottom, #ffeaf4, #fcddee);
-  padding: 20px 0 30px 0;
+  padding: 1px 0 30px 0;
+  margin-top: 30px;
   border-top: #f899b1 2px dotted;
   border-bottom: #f899b1 2px dotted;
 }
@@ -390,6 +416,12 @@ footer p {
   margin: 0 auto 1em auto;
   width: 85%;
 }
+
+/* contact.html */
+/* #contact01 iframe {
+  margin: auto;
+  width: 85%;
+} */
 
 /* SNSアイコン書式 */
 .snsIco {
@@ -563,7 +595,7 @@ footer p {
 
   /* メイン */
   main {
-    margin-top: 40px;
+    margin-top: 90px;
   }
   .eyeCatch {
     display: block;
