@@ -3,42 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <link href="../css/reset.css" rel="stylesheet" type="text/css">
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <title>Discordのご案内 - Salon de l'ibis ～新潟お茶会プロジェクト～</title>
-    <style>
-      #prog {
-        display: flex;
-        height: 400px;
-        margin: 1em auto;
-        align-items: center;
-        justify-content: center;
-      }
-      #prog img {
-        display: block;
-        height: 400px;
-      }
-
-      @media screen and (max-width: 900px) {
-        #prog {
-          display: block;
-        }
-        #prog div {
-          display: block;
-          margin: 1em auto;
-          width: auto;
-        }
-        #prog img {
-          margin: 0 auto;
-          height: 300px;
-        }
-      }
-    </style>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>NEWS - Salon de l'ibis ～新潟お茶会プロジェクト～</title>
   </head>
   <body>
     <header>
       <a href="index.html" id="headerTitle">
-        <img src="../img/logo.png" alt="ロゴ" id="headerLogo">
+        <img src="img/logo.png" alt="ロゴ" id="headerLogo">
         <div>
           <p id="headerSubTitle">新潟Kawaiiお茶会プロジェクト</p>        
           <p id="headerSDL" data-text="Salon de l'ibis">Salon de l'ibis</p>
@@ -47,7 +19,7 @@
       <div id="headerRight">
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="menu-icon">
-          <img src="../img/ico/hb.png" alt="メニュー">
+          <img src="img/ico/hb.png" alt="メニュー">
         </label>
         <nav class="menu">
           <ul>
@@ -57,20 +29,34 @@
             <li><a href="blog.html">BLOG</a></li>
             <li><a href="contact.html">CONTACT</a></li>
             <li class="snsIco">
-              <a href="https://x.com/ngtlolita" target="_blank"><img src="../img/ico/twitter.png" alt="Twitter" class="snsIco"></a>
-              <a href="discord.html"><img src="../img/ico/discord.png" alt="Discord" class="snsIco"></a>
+              <a href="https://x.com/ngtlolita"><img src="img/ico/twitter.png" alt="Twitter" class="snsIco"></a>
+              <a href="discord.html"><img src="img/ico/discord.png" alt="Discord" class="snsIco"></a>
             </li>
-          </ul>      
+          </ul>
         </nav>
       </div>
     </header>
     <main>
-      <p><a href="index.html">TOP</a>&nbsp;→&nbsp;Discordのご案内</p>
-      <div id="prog">
-        <div style="border: 2px solid #999; height: 3.2em; border-radius: 5px; padding: 10px; width: 270px;">
-          <p>このページは準備中なの…<br />ちょっと待っててほしいの！</p>
+      <p><a href="index.html">TOP</a>&nbsp;→&nbsp;NEWS</p>
+      <h2>NEWS</h2>
+      <div class="infoListArea">
+        <!-- 一番上に以下を追加 -->
+        <!-- 
+        <div class="infoList">
+          <div class="ILFlex">
+            <p class="ILDate">2025/09/12</p>
+            <p class="ILCat" style="--box-color:rgb(92, 156, 230);">お知らせ</p>
+          </div>
+          <p>サイトを開設しました。</p>
         </div>
-        <img src="../img/sarorin/sarorin_2508_01.png">
+        -->
+        <div class="infoList">
+          <div style="display: flex; align-items: center;">
+            <p class="ILDate">2025/09/12</p>
+            <p class="ILCat" style="--box-color:rgb(92, 156, 230);">お知らせ</p>
+          </div>
+          <p>サイトを開設しました。</p>
+        </div> 
       </div>
       <div class="button01">
         <a href="index.html">トップページへ</a>
