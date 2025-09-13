@@ -7,31 +7,42 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <title>イベント - Salon de l'ibis ～新潟お茶会プロジェクト～</title>
     <style>
-      #prog {
+      .event-area {
         display: flex;
-        height: 400px;
-        margin: 1em auto;
-        align-items: center;
+        flex-wrap: wrap;
         justify-content: center;
+        background: white;
+        margin: 0 50px;
+        padding: 30px;
+        border-radius: 10px;
+        border: 3px #404040 double;
+        width: 90%;
       }
-      #prog img {
+      .event-info {
         display: block;
-        height: 400px;
+        padding: 25px;
+        border: 2px #808080 solid;
+        width: 300px;
+        margin: 10px;
+        border-radius: 15px;
+        background: #ffebfe;
+        box-shadow: #404040 2px 2px 5px;
       }
-
-      @media screen and (max-width: 900px) {
-        #prog {
-          display: block;
-        }
-        #prog div {
-          display: block;
-          margin: 1em auto;
-          width: auto;
-        }
-        #prog img {
-          margin: 0 auto;
-          height: 300px;
-        }
+      .event-info:hover {
+        animation: popup 500ms alternate;
+      }
+      .event-info img {
+        display: block;
+        height: 250px;
+        margin: 5px auto;
+      }
+      .event-info p {
+        text-decoration: none;
+        color: #404040;
+      }
+      @keyframes popup {
+        from {opacity: 0; transform: translateY(0); }
+        to { opacity: 1; transform: translateY(-10); }
       }
     </style>
   </head>
@@ -66,11 +77,15 @@
     </header>
     <main>
       <p><a href="index.html">TOP</a>&nbsp;→&nbsp;EVENT</p>
-      <div id="prog">
-        <div style="border: 2px solid #999; height: 3.2em; border-radius: 5px; padding: 10px; width: 270px;">
-          <p>このページは準備中なの…<br />ちょっと待っててほしいの！</p>
-        </div>
-        <img src="img/sarorin/sarorin_2508_01.png">
+      <h2>EVENT</h2>
+      <div class="event-area">
+        <a href="event/20251123.html" class="event-info">
+          <img src="img/event/20251123.png">
+          <p style="text-align: center; margin-bottom: 1em;">Salon de l'ibis Kawaiiお茶会</p>
+          <p><span class="emoji">🗓️</span>2025/11/23（日）</p>
+          <p><span class="emoji">🕘</span>14:00～16:30</p>
+          <p><span class="emoji">🏳️</span>スペースコンフォート（新潟市）</p>
+        </a>
       </div>
       <div class="button01">
         <a href="index.html">トップページへ</a>

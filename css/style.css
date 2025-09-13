@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Kiwi+Maru&family=Noto+Color+Emoji&family=Noto+Sans+JP:wght@100..900&family=Sawarabi+Mincho&family=Yusei+Magic&display=swap');
 body {
   display: grid;
   place-items: center;
@@ -100,6 +100,12 @@ ol li {
 .button01 a:hover {
   color: #fcfcfc;
   background: #bd5b84;
+}
+
+.emoji {
+  font-family: "Noto Color Emoji", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /* 共通書式 -E */
 
